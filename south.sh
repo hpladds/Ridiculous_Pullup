@@ -1,3 +1,3 @@
 #! /bin/bash
 
-python /home/pi/south.py # move south
+python /home/pi/Ridiculous/south.py # move south

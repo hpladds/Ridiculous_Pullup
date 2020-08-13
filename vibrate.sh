@@ -1,3 +1,3 @@
 #! /bin/bash
 
-python /home/pi/vibrate.py # vibrate to indicate entering cable mode.
+python /home/pi/Ridiculous/vibrate.py # vibrate to indicate entering cable mode.

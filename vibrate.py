@@ -37,7 +37,7 @@ step4Leftover = 0
 
 #if you run file without current_coords.txt in folder (or not accurate)
 #comment out from here
-#F = open("/home/pi/current_coords.txt","r")
+#F = open("/home/pi/Ridiculous/current_coords.txt","r")
 #x = float(F.readline())
 #y = float(F.readline())
 #step1Leftover = float(F.readline())
@@ -561,7 +561,7 @@ while True:
   moveCircle(360)
   goHome()
 
-  F = open("/home/pi/current_coords.txt","w")
+  F = open("/home/pi/Ridiculous/current_coords.txt","w")
   F.write(str(x))
   F.write("\n")
   F.write(str(y))

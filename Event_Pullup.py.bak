@@ -159,34 +159,33 @@ def boo():
         if(DEBUG):print("Wait 2 seconds")
         time.sleep (2) #After button press wait 2 seconds
 
-        if GPIO.input(powerButton) == False: #Test for continued button press. If not pressed run brew script.
+        if GPIO.input(powerButton): #Test for continued button press. If not pressed run brew script.
             if(DEBUG):print("Run Brew script")
             os.system('/home/pi/brew.sh') # Execute the brew.sh bash script.
             zeroMode() # Clear the accidental button presses. 
 
-        elif GPIO.input(powerButton): # If button press continues, wait 3 more seconds.
+        elif GPIO.input(powerButton) == False: # If button press continues, wait 3 more seconds.
             if(DEBUG):print("Waiting 2 more")
             os.system('/home/pi/vibrate.sh') # Effector movement to signal that the \
             zeroMode()
             time.sleep (2)
-            if GPIO.input(powerButton) == False: #If button press does not continue, run the clear coordinance function. 
+            if GPIO.input(powerButton): #If button press does not continue, run the cable function.
                 if(DEBUG):print("Clearing zero position")
                 os.system('/home/pi/clear_coordinates.sh') # Execute the brew.sh bash script.
             	os.system('/home/pi/all_tighten.sh')
-            	os.system('/home/pi/all_tighten.sh')
                 zeroMode()
 
-        if GPIO.input(powerButton): # If button press continues, wait 3 more seconds.
+        if GPIO.input(powerButton) == False: # If button press continues, wait 3 more seconds.
             if(DEBUG):print("Waiting another 2 seconds.")
-            os.system('/home/pi/vibrate.sh') # Effector movement to signal  e
+            os.system('/home/pi/vibrate.sh') # Effector movement to signal that the \
             zeroMode()
             time.sleep (2)
 
-            if GPIO.input(powerButton) == False: #If button press does not continue, run the cable function.
+            if GPIO.input(powerButton): #If button press does not continue, run the cable function.
                 if(DEBUG):print("Going into cable")
                 cable()
 
-            elif GPIO.input(powerButton): #If button press still continues, run shutdown script.
+            elif GPIO.input(powerButton) == False: #If button press still continues, run shutdown script.
                 if(DEBUG):print("Shutting Down")
                 os.system('/home/pi/vibrate.sh') # Effector movement to signal that the \
                 time.sleep (2)

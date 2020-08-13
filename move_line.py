@@ -569,7 +569,7 @@ while True:
   moveLine(2, 210)
 ######################### End movement code.
 
-  F = open("/home/pi/current_coords.txt","w")
+  F = open("/home/pi/Ridiculous/current_coords.txt","w")
   F.write(str(x))
   F.write("\n")
   F.write(str(y))
