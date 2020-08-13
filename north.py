@@ -559,7 +559,7 @@ while True:
 
   moveLine(.0625,90)
  
-  F = open("/home/pi/current_coords.txt","w")
+  F = open("/home/pi/Ricidulous/current_coords.txt","w")
   F.write(str(x))
   F.write("\n")
   F.write(str(y))

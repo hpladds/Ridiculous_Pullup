@@ -71,7 +71,7 @@ def cable():
             
         if GPIO.event_detected(powerButton):
             print("Exiting cable.")
-            os.system('/home/pi/vibrate.sh') # Effector movement to signal user of exit. 
+            os.system('/home/pi/Ridiculous/vibrate.sh') # Effector movement to signal user of exit. 
             main()
             
 def motor1_spin():                
@@ -81,14 +81,14 @@ def motor1_spin():
             
         if GPIO.event_detected(westButton):
             print("Motor 1 clock.")
-            os.system('/home/pi/1_cw.sh')
+            os.system('/home/pi/Ridiculous/1_cw.sh')
                 
         if GPIO.event_detected(southButton):
             print("void")
                 
         if GPIO.event_detected(eastButton):
             print("Motor 1 counter.")
-            os.system('/home/pi/1_ccw.sh')
+            os.system('/home/pi/Ridiculous/1_ccw.sh')
         
         if GPIO.event_detected(powerButton):
             print("cable")
@@ -101,14 +101,14 @@ def motor2_spin():
             
         if GPIO.event_detected(westButton):
             print("Motor 2 clock.")
-            os.system('/home/pi/2_cw.sh')
+            os.system('/home/pi/Ridiculous/2_cw.sh')
                 
         if GPIO.event_detected(southButton):
             print("void")
                 
         if GPIO.event_detected(eastButton):
             print("Motor 2 counter.")
-            os.system('/home/pi/2_ccw.sh')
+            os.system('/home/pi/Ridiculous/2_ccw.sh')
         
         if GPIO.event_detected(powerButton):
             print("cable")
@@ -121,14 +121,14 @@ def motor3_spin():
             
         if GPIO.event_detected(westButton):
             print("Motor 3 clock.")
-            os.system('/home/pi/3_cw.sh')
+            os.system('/home/pi/Ridiculous/3_cw.sh')
                 
         if GPIO.event_detected(southButton):
             print("void")
                 
         if GPIO.event_detected(eastButton):
             print("Motor 3 counter.")
-            os.system('/home/pi/3_ccw.sh')
+            os.system('/home/pi/Ridiculous/3_ccw.sh')
         
         if GPIO.event_detected(powerButton):
             print("cable")
@@ -141,14 +141,14 @@ def motor4_spin():
             
         if GPIO.event_detected(westButton):
             print("Motor 4 clock.")
-            os.system('/home/pi/4_cw.sh')
+            os.system('/home/pi/Ridiculous/4_cw.sh')
                 
         if GPIO.event_detected(southButton):
             print("void")
                 
         if GPIO.event_detected(eastButton):
             print("Motor 4 counter.")
-            os.system('/home/pi/4_ccw.sh')
+            os.system('/home/pi/Ridiculous/4_ccw.sh')
         
         if GPIO.event_detected(powerButton):
             print("cable")
@@ -161,23 +161,23 @@ def boo():
 
         if GPIO.input(powerButton): #Test for continued button press. If not pressed run brew script.
             if(DEBUG):print("Run Brew script")
-            os.system('/home/pi/brew.sh') # Execute the brew.sh bash script.
+            os.system('/home/pi/Ridiculous/brew.sh') # Execute the brew.sh bash script.
             zeroMode() # Clear the accidental button presses. 
 
         elif GPIO.input(powerButton) == False: # If button press continues, wait 3 more seconds.
             if(DEBUG):print("Waiting 2 more")
-            os.system('/home/pi/vibrate.sh') # Effector movement to signal that the \
+            os.system('/home/pi/Ridiculous/vibrate.sh') # Effector movement to signal that the \
             zeroMode()
             time.sleep (2)
             if GPIO.input(powerButton): #If button press does not continue, run the cable function.
                 if(DEBUG):print("Clearing zero position")
-                os.system('/home/pi/clear_coordinates.sh') # Execute the brew.sh bash script.
-            	os.system('/home/pi/all_tighten.sh')
+                os.system('/home/pi/Ridiculous/clear_coordinates.sh') # Execute the brew.sh bash script.
+            	os.system('/home/pi/Ridiculous/all_tighten.sh')
                 zeroMode()
 
         if GPIO.input(powerButton) == False: # If button press continues, wait 3 more seconds.
             if(DEBUG):print("Waiting another 2 seconds.")
-            os.system('/home/pi/vibrate.sh') # Effector movement to signal that the \
+            os.system('/home/pi/Ridiculous/vibrate.sh') # Effector movement to signal that the \
             zeroMode()
             time.sleep (2)
 
@@ -187,25 +187,25 @@ def boo():
 
             elif GPIO.input(powerButton) == False: #If button press still continues, run shutdown script.
                 if(DEBUG):print("Shutting Down")
-                os.system('/home/pi/vibrate.sh') # Effector movement to signal that the \
+                os.system('/home/pi/Ridiculous/vibrate.sh') # Effector movement to signal that the \
                 time.sleep (2)
                 os.system('sudo shutdown -h now') # Execute the brew.sh bash script.
 
     if GPIO.event_detected(northButton):
         if(DEBUG):print("North button pressed")
-        os.system('/home/pi/north.sh') #Moves effector "north" by a step number specified in "north.sh"
+        os.system('/home/pi/Ridiculous/north.sh') #Moves effector "north" by a step number specified in "north.sh"
                  
     if GPIO.event_detected(westButton):
         if(DEBUG):print("West button pressed")
-        os.system('/home/pi/west.sh')  #Moves effector "west" by a step number specified in "west.sh"     
+        os.system('/home/pi/Ridiculous/west.sh')  #Moves effector "west" by a step number specified in "west.sh"     
       
     if GPIO.event_detected(eastButton):
         if(DEBUG):print("East button pressed")
-        os.system('/home/pi/east.sh')  #Moves effector "east" by a step number specified in "east.sh"     
+        os.system('/home/pi/Ridiculous/east.sh')  #Moves effector "east" by a step number specified in "east.sh"     
 
     if GPIO.event_detected(southButton):
         if(DEBUG):print("South button pressed")
-        os.system('/home/pi/south.sh') #Moves effector "south" by a step number specified in "south.sh"
+        os.system('/home/pi/Ridiculous/south.sh') #Moves effector "south" by a step number specified in "south.sh"
 
 def main():
     while True:
