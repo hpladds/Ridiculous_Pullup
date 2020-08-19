@@ -14,8 +14,8 @@ GPIO.setmode(GPIO.BCM)
 DEBUG=1 #To see debug warnings set to "1" otherwise "0"
 Btime=500 # This sets the debounce time in milliseconds.
 
-northButton=14
-powerButton=4
+northButton=4
+powerButton=14
 westButton=15
 southButton=18
 eastButton=23
