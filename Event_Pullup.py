@@ -54,16 +54,16 @@ def zeroMode():
 def cable():
     while True:
         if GPIO.event_detected(northButton):
-            print("Motor 1 selected in cable mode.")
-            motor1_spin()
-
-        if GPIO.event_detected(westButton):
-            print("Motor 2 selected in cable mode.")
-            motor2_spin()
-                
-        if GPIO.event_detected(southButton):
             print("Motor 3 selected in cable mode.")
             motor3_spin()
+
+        if GPIO.event_detected(westButton):
+            print("Motor 1 selected in cable mode.")
+            motor1_spin()
+                
+        if GPIO.event_detected(southButton):
+            print("Motor 2 selected in cable mode.")
+            motor2_spin()
                 
         if GPIO.event_detected(eastButton):
             print("Motor 4 selected in cable mode.")
@@ -101,14 +101,14 @@ def motor2_spin():
             
         if GPIO.event_detected(westButton):
             print("Motor 2 clock.")
-            os.system('/home/pi/Ridiculous/2_cw.sh')
+            os.system('/home/pi/Ridiculous/2_ccw.sh')
                 
         if GPIO.event_detected(southButton):
             print("void")
                 
         if GPIO.event_detected(eastButton):
             print("Motor 2 counter.")
-            os.system('/home/pi/Ridiculous/2_ccw.sh')
+            os.system('/home/pi/Ridiculous/2_cw.sh')
         
         if GPIO.event_detected(powerButton):
             print("cable")
@@ -172,7 +172,7 @@ def boo():
             if GPIO.input(powerButton): #If button press does not continue, run the cable function.
                 if(DEBUG):print("Clearing zero position")
                 os.system('/home/pi/Ridiculous/clear_coordinates.sh') # Execute the brew.sh bash script.
-            	os.system('/home/pi/Ridiculous/all_tighten.sh')
+            	#os.system('/home/pi/Ridiculous/all_tighten.sh')
                 zeroMode()
 
         if GPIO.input(powerButton) == False: # If button press continues, wait 3 more seconds.

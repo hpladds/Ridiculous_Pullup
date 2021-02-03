@@ -6,10 +6,10 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
  
 #enable_pin = 18 # only for L293D IC
-coil_A_1_pin = 27 #orange 
-coil_A_2_pin = 22 #yellow
-coil_B_1_pin = 10 #pink 
-coil_B_2_pin = 9  #blue 
+coil_A_1_pin = 21 #orange 
+coil_A_2_pin = 20 #yellow 
+coil_B_1_pin = 16 #pink 
+coil_B_2_pin = 12 #blue 
 
 delay = float (sys.argv [1])
 steps = sys.argv [2]

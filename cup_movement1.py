@@ -6,17 +6,16 @@ import math
  
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
+
+coil_A_1_pin1 = 21 #orange 
+coil_A_2_pin1 = 20 #yellow 
+coil_B_1_pin1 = 16 #pink 
+coil_B_2_pin1 = 12 #blue
  
-
-coil_A_1_pin1 = 27 #orange 
-coil_A_2_pin1 = 22 #yellow 
-coil_B_1_pin1 = 10 #pink 
-coil_B_2_pin1 = 9 #blue 
-
-coil_A_1_pin3 = 21 #orange 
-coil_A_2_pin3 = 20 #yellow 
-coil_B_1_pin3 = 16 #pink 
-coil_B_2_pin3 = 12 #blue 
+coil_A_1_pin3 = 27 #orange 
+coil_A_2_pin3 = 22 #yellow 
+coil_B_1_pin3 = 10 #pink 
+coil_B_2_pin3 = 9  #blue 
 
 coil_A_1_pin4 = 7  #orange 
 coil_A_2_pin4 = 8  #yellow  
@@ -561,21 +560,21 @@ while True:
 
 ######################### Start movement code.
  
-  moveLine(.625, 337.5) # move pour to the west
+  moveLine(.625, 337.5) # move pour 22.5 degrees to the northwest
   moveLine(.5, 0) # move pour to the west
-  moveLine(.625, 22.5) #move pour to soutwest 22.5 degrees
-  moveLine(.625, 45) #move pour to southwest 45 degrees
+  moveLine(.625, 22.5) #move pour to soutwest 22.5 degree
+  moveLine(.625, 45) #move pour to southwest 45 degree
   moveLine(.625, 135) #pour to souteast 45 degrees
   moveLine(.625, 157.5) #pour to souteast 22.5 degrees
   moveLine(.5, 180) #pour to east 
   moveLine(.625, 202.5) #pour to northeast 22.5 degrees
-  moveLine(.83, 270) #pour to north # less .25 to accommodate the spout's curve.
+  moveLine(.83, 270) #pour to north # less .05 to accommodate the spout's curve.
   moveLine(1.66, 0) #pour to the west 
   moveLine(.88, 90) #pour to the south
   moveLine(1.66, 180) #pour to the east
   moveLine(.88, 270) #pour to the north
   
-  moveLine(.625, 337.5) # move pour to the west
+  moveLine(.625, 337.5) # move pour to the northwest
   moveLine(.5, 0) # move pour to the west
   moveLine(.625, 22.5) #move pour to soutwest 22.5 degrees
   moveLine(.625, 45) #move pour to southwest 45 degrees
@@ -583,11 +582,11 @@ while True:
   moveLine(.625, 157.5) #pour to souteast 22.5 degrees
   moveLine(.5, 180) #pour to east 
   moveLine(.625, 202.5) #pour to northeast 22.5 degrees
-  moveLine(.88, 270) #pour to north # less .25 to accommodate the spout's curve.
+  moveLine(.88, 270) #pour to north 
   moveLine(1.66, 0) #pour to the west
   moveLine(.88, 90) #pour to the south
   moveLine(1.66, 180) #pour to the east
-  moveLine(.88, 270) #pour to the north
+  moveLine(.983, 333.435) #pour to center 
 
 ######################### End movement code.
 

@@ -6,16 +6,16 @@ import math
  
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
- 
-coil_A_1_pin1 = 27 #orange 
-coil_A_2_pin1 = 22 #yellow 
-coil_B_1_pin1 = 10 #pink 
-coil_B_2_pin1 = 9  #blue 
 
-coil_A_1_pin3 = 21 #orange 
-coil_A_2_pin3 = 20 #yellow 
-coil_B_1_pin3 = 16 #pink 
-coil_B_2_pin3 = 12 #blue 
+coil_A_1_pin1 = 21 #orange 
+coil_A_2_pin1 = 20 #yellow 
+coil_B_1_pin1 = 16 #pink 
+coil_B_2_pin1 = 12 #blue 
+ 
+coil_A_1_pin3 = 27 #orange 
+coil_A_2_pin3 = 22 #yellow 
+coil_B_1_pin3 = 10 #pink 
+coil_B_2_pin3 = 9  #blue 
 
 coil_A_1_pin4 = 7  #orange 
 coil_A_2_pin4 = 8  #yellow
@@ -561,7 +561,7 @@ while True:
 ######################### Start movement code.
  
   moveLine(1.72, 227.59) # move pour spot to northeast 
-  moveLine(.25, 90) # move pour spot to south # temporary adjustment for strong initial pour. 
+  moveLine(.5, 90) # move pour spot to south # temporary adjustment for strong initial pour. 
   moveLine(.625, 315) # move pour to the northwest 45 degrees
   moveLine(.625, 337.5) # move spot to the northwest 22.5 degrees
   moveLine(.5, 0) # move pour to the west
@@ -582,7 +582,7 @@ while True:
   moveLine(.5, 0) # repeat of above
   moveLine(.625, 22.5) # repeat of above
   moveLine(.625, 45) # repeat of above
-  moveLine(.25, 90) #move pour to south 90 degrees
+  moveLine(.25, 90) #move pour to south 90 degrees, adjustment for slower pour speed.
   moveLine(.625, 135) # repeat of above
   moveLine(.625, 157.5) # repeat of above
   moveLine(.5, 180) # repeat of above

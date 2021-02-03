@@ -7,15 +7,15 @@ import math
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
  
-coil_A_1_pin1 = 27 #orange  
-coil_A_2_pin1 = 22 #yellow
-coil_B_1_pin1 = 10 #pink
-coil_B_2_pin1 = 9  #blue
+coil_A_1_pin1 = 21 #orange  
+coil_A_2_pin1 = 20 #yellow
+coil_B_1_pin1 = 16 #pink
+coil_B_2_pin1 = 12 #blue
 
-coil_A_1_pin3 = 21 #orange
-coil_A_2_pin3 = 20 #yellow
-coil_B_1_pin3 = 16 #purple/pink
-coil_B_2_pin3 = 12 #blue
+coil_A_1_pin3 = 27 #orange
+coil_A_2_pin3 = 22 #yellow
+coil_B_1_pin3 = 10 #purple/pink
+coil_B_2_pin3 =  9 #blue
 
 coil_A_1_pin4 = 7 #orange
 coil_A_2_pin4 = 8 #yellow
@@ -559,7 +559,7 @@ while True:
 
   moveLine(.0625,90)
  
-  F = open("/home/pi/Ricidulous/current_coords.txt","w")
+  F = open("/home/pi/Ridiculous/current_coords.txt","w")
   F.write(str(x))
   F.write("\n")
   F.write(str(y))
