@@ -1,0 +1,9 @@
+To back up to Github, follow these steps:
+
+1) Update the local branch repository
+	"git add ."
+	"git commit -m "Description of resent work"
+
+2) Update the remote main repository
+	"git push origin HEAD:master"
+
