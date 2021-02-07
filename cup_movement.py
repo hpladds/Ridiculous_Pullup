@@ -560,14 +560,14 @@ while True:
 
 ######################### Start movement code.
  
-  moveLine(.25, 90) # move pour spot to south # temporary adjustment for strong initial pour. 
+  moveLine(.5, 90) # move pour spot to south # temporary adjustment for strong initial pour. 
   moveLine(1.72, 227.59) # move pour spot to northeast 
   moveLine(.625, 315) # move pour to the northwest 45 degrees
   moveLine(.625, 337.5) # move spot to the northwest 22.5 degrees
   moveLine(.5, 0) # move pour to the west
   moveLine(.625, 22.5) #move pour to soutwest 22.5 degrees
   moveLine(.625, 45) #move pour to southwest 45 degrees
-  moveLine(.25, 270) # move pour spot to north # readjustment for strong initial pour. 
+  moveLine(.5, 270) # move pour spot to north # readjustment for strong initial pour. 
   moveLine(.625, 135) #pour to souteast 45 degrees
   moveLine(.625, 157.5) #pour to souteast 22.5 degrees
   moveLine(.5, 180) #pour to east 
