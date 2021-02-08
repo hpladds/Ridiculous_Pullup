@@ -585,7 +585,7 @@ while True:
   moveLine(.88, 270) #pour to north 
   moveLine(1.66, 0) #pour to the west
   moveLine(.88, 90) #pour to the south
-  moveLine(.86, 180) #pour to the east center
+  #moveLine(.86, 180) #pour to the east center
   #moveLine(1.66, 180) #pour to the east
   #moveLine(.983, 333.435) #pour to center 
 
