@@ -572,7 +572,7 @@ while True:
   moveLine(1.66, 0) #pour to the west 
   moveLine(.88, 90) #pour to the south
   moveLine(1.66, 180) #pour to the east
-  moveLine(.63, 270) #pour to the north - .25 inch to move pour south a bit.
+  moveLine(1.33, 270) #pour to the north + .5 inch.
   
   moveLine(.625, 337.5) # move pour to the northwest
   moveLine(.5, 0) # move pour to the west
