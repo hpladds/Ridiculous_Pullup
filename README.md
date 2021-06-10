@@ -12,6 +12,6 @@ From the Linux command line the following will rotate the motor's shaft in a clo
 
 $ python 1_cw.py 1 10
 
-Each motor is fitted with a pulley gear wound with a cable. As the motorshaft rotates the cable reels in or out; thereby creating a cable actuator. Three of these actuators are connected to central "effector" creating a "cable robot."
+Each motor is fitted with a pulley gear wound with a cable. As the motorshaft rotates the cable reels in or out thereby creating a cable actuator. Three of these actuators are connected to central "effector" creating a "cable robot."
 
 The python script, "move_dist.py" coordinates the movements of the actuators and directs the movement of the "effector." Movement of the coffee cup is acheived by placing it upon the effector. A fourth actuator controls the rate at which boiling water is poured from a kettle over coffee grinds and into the cup below.
