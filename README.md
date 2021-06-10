@@ -19,19 +19,3 @@ Each motor is fitted with a pulley gear wound with a cable. As the motorshaft ro
 The python script, "move_dist.py" coordinates the actions of the three stepper motors (the cable actuators) so as to control the movement of the "effector." Movement of the coffee cup is acheived by placing it upon the effector and executing the move_dist.py script.
 
 The script move_dist.py coordinates the movement of all the motors. There are many variants of the moveLine.py script. Each variant directs a movement routine for the effector. 
-
-About
-No description, website, or topics provided.
-Topics
-Resources
-Readme
-Releases
-No releases published
-Create a new release
-Packages
-No packages published
-Publish your first package
-Languages
-
-Python 99.0%
-Shell 1.0%
